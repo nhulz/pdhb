@@ -1,0 +1,73 @@
+/*
+ * Theme Name: My Timber Starter Theme
+ * Description: Starter Theme to use with Timber
+ * Author: Upstatement and YOU!
+*/
+@import url("https://use.typekit.net/uvr6tre.css");
+@import url("https://fonts.googleapis.com/css?family=Aref+Ruqaa");
+/* @import "sassline-base"; */
+/* line 5, sass/partials/_reset.scss */
+* {
+  box-sizing: border-box; }
+
+/* line 6, sass/partials/_reset.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* line 7, sass/partials/_reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 8, sass/partials/_reset.scss */
+html, body {
+  height: 100%; }
+
+/* line 9, sass/partials/_reset.scss */
+a img {
+  border: none; }
+
+/* line 10, sass/partials/_reset.scss */
+blockquote {
+  quotes: none; }
+
+/* line 11, sass/partials/_reset.scss */
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+/* line 12, sass/partials/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 13, sass/partials/_reset.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 7, sass/partials/_typography.scss */
+html {
+  font-size: 62.5%; }
+
+/* line 8, sass/partials/_typography.scss */
+body {
+  font-size: 1.4rem; }
+
+/* =14px */
+/* line 41, sass/partials/_typography.scss */
+h1 {
+  font-family: paralucent, sans-serif;
+  font-weight: 400;
+  font-size: 11rem; }
+
+/* line 45, sass/partials/_typography.scss */
+p {
+  font-family: freight-sans-pro, sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem; }
