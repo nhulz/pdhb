@@ -5,7 +5,7 @@
 */
 @import url("https://use.typekit.net/uvr6tre.css");
 @import url("https://fonts.googleapis.com/css?family=Aref+Ruqaa");
-/* @import "sassline-base"; */
+@import url("https://fonts.googleapis.com/css?family=Poppins");
 /* line 5, sass/partials/_reset.scss */
 * {
   box-sizing: border-box; }
@@ -25,6 +25,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 8, sass/partials/_reset.scss */
 html, body {
+  width: 100%;
   height: 100%; }
 
 /* line 9, sass/partials/_reset.scss */
@@ -60,14 +61,110 @@ body {
   font-size: 1.4rem; }
 
 /* =14px */
-/* line 41, sass/partials/_typography.scss */
+/* line 46, sass/partials/_typography.scss */
 h1 {
   font-family: paralucent, sans-serif;
   font-weight: 400;
-  font-size: 11rem; }
+  font-size: 11rem;
+  line-height: 11rem; }
 
-/* line 45, sass/partials/_typography.scss */
+/* line 51, sass/partials/_typography.scss */
+h2 {
+  font-family: poppins,sans-serif;
+  font-weight: 400;
+  font-size: 2.4rem; }
+
+/* line 55, sass/partials/_typography.scss */
 p {
   font-family: freight-sans-pro, sans-serif;
   font-weight: 400;
   font-size: 1.6rem; }
+
+/* line 1, sass/partials/_layout.scss */
+.body {
+  overflow: hidden; }
+
+/* .page-container {
+  background-color: white;
+  margin: 2rem;
+  padding: 2rem 0rem;
+  height: calc(100vh - 4rem);
+} */
+/* .inner-container {
+  margin-left: 16rem;
+
+  &::before {
+    content: '';
+    border-left: 1px $light-gray solid;
+    position: absolute;
+    left: 0rem;
+    top: 2rem;
+    height: calc(100vh - 4rem);
+  }
+} */
+/* line 25, sass/partials/_layout.scss */
+.page-container {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: #D6B000; }
+  /* line 31, sass/partials/_layout.scss */
+  .page-container__inner {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden; }
+
+/* line 40, sass/partials/_layout.scss */
+.content-wrapper,
+.wrapper {
+  width: 100%;
+  height: 100%; }
+
+/* line 46, sass/partials/_layout.scss */
+.container {
+  max-width: 90rem;
+  margin: 0 auto; }
+
+/* line 51, sass/partials/_layout.scss */
+.header-container {
+  margin-top: 100px; }
+
+/* line 55, sass/partials/_layout.scss */
+.body-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px; }
+
+/* line 61, sass/partials/_layout.scss */
+.category {
+  flex-grow: 1;
+  flex-basis: 33%;
+  margin-bottom: 4rem; }
+
+/* line 67, sass/partials/_layout.scss */
+.category-title, .post-title {
+  text-decoration: none;
+  color: black; }
+
+/* line 72, sass/partials/_layout.scss */
+.link-container > li {
+  font-family: 'Aref Ruqaa', serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  list-style-type: none; }
+
+/* line 79, sass/partials/_layout.scss */
+#line-vertical {
+  width: 1px;
+  background-color: #D8D8D8; }
+
+/* line 84, sass/partials/_layout.scss */
+#line-horizontal {
+  height: 1px;
+  background-color: #D8D8D8; }
+
+/* line 1, sass/templates/_home.scss */
+body {
+  background-color: #D6B000; }

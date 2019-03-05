@@ -1,11 +1,36 @@
 {% extends "base.twig" %}
 
 {% block content %}
-<div class="typeset">
-	<h1>The Product Design Handbook</h1>
-	<h2>The Product Design Handbook</h2>
-	<h3>The Product Design Handbook</h3>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc aliquet bibendum enim facilisis gravida neque convallis. Blandit turpis cursus in hac habitasse platea. Scelerisque eleifend donec pretium vulputate sapien nec. Dolor magna eget est lorem ipsum dolor sit amet consectetur. Nisl purus in mollis nunc. Tempus quam pellentesque nec nam. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Sed vulputate odio ut enim. Libero nunc consequat interdum varius sit. Felis eget velit aliquet sagittis id consectetur.</p>
-	<a>Hello</a>
+<!--
+<div class="page-container">
+		<div class="header-container">
+			<h1>The Product <br> Design Handbook</h1>
+		</div>
+		<div class="inner-container">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc aliquet bibendum enim facilisis gravida neque convallis. Blandit turpis cursus in hac habitasse platea. Scelerisque eleifend donec pretium vulputate sapien nec. Dolor magna eget est lorem ipsum dolor sit amet consectetur. Nisl purus in mollis nunc. Tempus quam pellentesque nec nam. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Sed vulputate odio ut enim. Libero nunc consequat interdum varius sit. Felis eget velit aliquet sagittis id consectetur.</p>
+	</div>
+</div>
+-->
+<div class="page-container">
+	<div class="page-container__inner">
+		<div class="container">
+			<header class="header-container">
+				<h1>The Product <br> Design Handbook</h1>
+			</header>
+			<main class="body-container">
+					{% for category in categories %}
+					<div class="category">
+					        <h2><a class="category-title" href="{{category.link}}">{{category.name}}</a></h2>
+					        <ul class="link-container">
+					            {% for post in category.posts %}
+											<li><a class="post-title" href="{{post.url}}">{{post.title}}</a></li>
+					            {% endfor %}
+					        </ul>
+								</div>
+					{% endfor %}
+				</div>
+			</main>
+		</div>
+	</div>
 </div>
 {% endblock %}

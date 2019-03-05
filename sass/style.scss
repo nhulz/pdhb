@@ -6,7 +6,13 @@
 
 @import url("https://use.typekit.net/uvr6tre.css");
 @import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
 
-/* @import "sassline-base"; */
+
 @import "partials/reset.scss";
-@import "partials/typography";
+@import "partials/typography.scss";
+@import "partials/color.scss";
+@import "partials/layout.scss";
+
+
+@import "templates/home";

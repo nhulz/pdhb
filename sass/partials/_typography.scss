@@ -30,6 +30,12 @@ $medium: 500;
   font-size: $size;
 }
 
+@mixin poppins_font($weight, $size){
+  font-family: poppins,sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+}
+
 @mixin frieght_font($weight, $size){
   font-family: freight-sans-pro, sans-serif;
   font-weight: $weight;
@@ -37,9 +43,13 @@ $medium: 500;
 }
 
 
-
 h1{
   @include paralucent_font($regular, $text-xxl);
+  line-height: 11rem;
+}
+
+h2{
+  @include poppins_font($regular, $text-md);
 }
 
 p{
