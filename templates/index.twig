@@ -19,7 +19,7 @@
 			</header>
 			<main class="body-container">
 					{% for category in categories %}
-					<div class="category">
+					<div class="category-container">
 					        <h2><a class="category-title" href="{{category.link}}">{{category.name}}</a></h2>
 					        <ul class="link-container">
 					            {% for post in category.posts %}

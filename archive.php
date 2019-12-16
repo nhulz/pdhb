@@ -15,6 +15,7 @@
  */
 
 $templates = array( 'archive.twig', 'index.twig' );
+$context['categories'] = Timber::get_terms('category');
 
 $context = Timber::get_context();
 
@@ -36,5 +37,6 @@ if ( is_day() ) {
 }
 
 $context['posts'] = new Timber\PostQuery();
+// $context['posts'] = Timber::get_posts();
 
 Timber::render( $templates, $context );

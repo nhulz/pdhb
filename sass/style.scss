@@ -7,12 +7,17 @@
 @import url("https://use.typekit.net/uvr6tre.css");
 @import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa');
 @import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap');
 
 
 @import "partials/reset.scss";
 @import "partials/typography.scss";
 @import "partials/color.scss";
+@import "partials/media-queries.scss";
 @import "partials/layout.scss";
+@import "partials/utility.scss";
+
 
 
 @import "templates/home";
+@import "templates/archive";
