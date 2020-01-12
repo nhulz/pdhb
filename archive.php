@@ -15,9 +15,10 @@
  */
 
 $templates = array( 'archive.twig', 'index.twig' );
+$context = Timber::get_context();
+
 $context['categories'] = Timber::get_terms('category');
 
-$context = Timber::get_context();
 
 $context['title'] = 'Archive';
 if ( is_day() ) {
@@ -35,6 +36,15 @@ if ( is_day() ) {
 	$context['title'] = post_type_archive_title( '', false );
 	array_unshift( $templates, 'archive-' . get_post_type() . '.twig' );
 }
+
+$post = Timber::get_post();
+$context['post'] = $post;
+// Get all categories assigned to post
+$categories = $post->terms( 'category' );
+$context['category_list'] = $categories;
+
+// Return an array of parent categories
+$context['parent_categories'] = Timber::get_terms(array('taxonomy' => 'category', 'parent' => 0));
 
 $context['posts'] = new Timber\PostQuery();
 // $context['posts'] = Timber::get_posts();

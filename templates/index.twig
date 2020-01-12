@@ -18,12 +18,12 @@
 				<h1>The Product <br> Design Handbook</h1>
 			</header>
 			<main class="body-container">
-					{% for category in categories %}
+			{% for term in parent_categories %}
 					<div class="category-container">
-					        <h2><a class="category-title" href="{{category.link}}">{{category.name}}</a></h2>
+					        <h3><a class="category-title" href="{{term.link}}">{{term.name}}</a></h3>
 					        <ul class="link-container">
-					            {% for post in category.posts %}
-											<li><a class="post-title" href="{{post.url}}">{{post.title}}</a></li>
+					            {% for category in term.children %}
+											<li><a class="post-title" href="{{category.link}}">{{category.name}}</a></li>
 					            {% endfor %}
 					        </ul>
 								</div>

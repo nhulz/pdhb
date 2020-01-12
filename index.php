@@ -24,5 +24,5 @@ if ( is_home() ) {
 }
 
 
-
+$context['parent_categories'] = Timber::get_terms(array('taxonomy' => 'category', 'parent' => 0));
 Timber::render( $templates, $context );
