@@ -210,6 +210,71 @@ body.category-methodologies .page-container {
   height: 1px;
   background-color: #D8D8D8; }
 
+/* line 108, sass/partials/_layout.scss */
+.toggle-content {
+  display: none; }
+
+/* line 112, sass/partials/_layout.scss */
+.toggle-content.is-visible {
+  display: block; }
+
+/* line 117, sass/partials/_layout.scss */
+.mobile-nav {
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  padding: 2rem; }
+
+/* line 126, sass/partials/_layout.scss */
+.nav-icon {
+  margin: 1em;
+  width: 40px; }
+
+/* line 131, sass/partials/_layout.scss */
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2rem; }
+
+/* line 137, sass/partials/_layout.scss */
+.nav-icon:after,
+.nav-icon:before,
+.nav-icon div {
+  background-color: #000;
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 5px;
+  margin: 7px 0;
+  transition: all .2s ease-in-out;
+  width: 50px; }
+
+/* line 151, sass/partials/_layout.scss */
+.close {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 32px;
+  height: 32px; }
+
+/* line 159, sass/partials/_layout.scss */
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333; }
+
+/* line 167, sass/partials/_layout.scss */
+.close:before {
+  transform: rotate(45deg); }
+
+/* line 170, sass/partials/_layout.scss */
+.close:after {
+  transform: rotate(-45deg); }
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   /* line 3, sass/partials/_layout-media-query.scss */

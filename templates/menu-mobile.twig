@@ -1,11 +1,31 @@
 
+
+<div class="mobile-nav toggle-content" id="nav-toggle">
 {% if menu %}
-	<ul>
+{% for term in parent_categories %}
+		<div class="category-container">
+						<h3><a class="category-title" href="{{term.link}}">{{term.name}}</a></h3>
+						<ul class="link-container">
+								{% for category in term.children %}
+								<li><a class="post-title" href="{{category.link}}">{{category.name}}</a></li>
+								{% endfor %}
+						</ul>
+					</div>
+		{% endfor %}
+	{% endif %}
+	<div>
+		<a class="toggle close" href="#nav-toggle">
+		</a>
+	</div>
+
+</div>
+
+	<!-- <ul>
 	{% for item in menu %}
 		<li class="{{ item.classes | join(' ') }}">
 			<a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
 			{% include "menu.twig" with {'menu': item.get_children} %}
+			hi
 		</li>
 	{% endfor %}
-	</ul>
-{% endif %}
+	</ul> -->

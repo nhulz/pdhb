@@ -5,9 +5,17 @@
 
 {% block content %}
 {% include "menu-mobile.twig" %}
+
 <div class="page-container">
 	<div class="page-container__inner">
+
+		<!-- Navigation toggle -->
+		<div class="nav-container">
+			<a class="toggle nav-icon" href="#nav-toggle"><div href="#nav-toggle"></div></a>
+		</div>
+
 		<div class="container archive-container">
+
 			<header class="header-container">
 				<a class="back-btn" href="{{site.url}}">< Back</a>
         {% if title %}<h1>{{title}}</h1>{% endif %}
