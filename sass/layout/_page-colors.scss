@@ -1,0 +1,33 @@
+body {
+
+  /* METHODOLOGIES COLOR*/
+  &.category-methodologies,
+  &.category-ui,
+  &.category-design-sprints,
+  &.category-color-methodologies,
+  &.category-user-interface {
+    & .page-container{
+      background-color: $blue;
+        &::before, &::after{
+          background-color: $blue;
+        }
+      }
+    }
+
+  /* METHODOLOGIES COLOR*/
+  &.category-components,
+  &.category-modals-overlays,
+  &.category-data-visualization,
+  &.category-forms{
+    & .page-container{
+      background-color: $green;
+        &::before, &::after{
+          background-color: $green;
+        }
+      }
+    }
+
+
+
+
+  }
