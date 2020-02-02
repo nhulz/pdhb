@@ -14,10 +14,11 @@ body {
       }
     }
 
-  /* METHODOLOGIES COLOR*/
+  /* COMPONENTS COLOR*/
   &.category-components,
   &.category-modals-overlays,
   &.category-data-visualization,
+  &.category-navigation-components,
   &.category-forms{
     & .page-container{
       background-color: $green;
@@ -27,7 +28,50 @@ body {
       }
     }
 
+  /* EXERCISES COLOR*/
+  &.category-exercises{
+    & .page-container{
+      background-color: $teal;
+        &::before, &::after{
+          background-color: $teal;
+        }
+      }
+    }
 
+  /* GETTING STARTED COLOR*/
+  &.category-basics,
+  &.category-basics-ui{
+    & .page-container{
+      background-color: $red;
+        &::before, &::after{
+          background-color: $red;
+        }
+      }
+    }
+
+  /* RESOURCES COLOR*/
+  &.category-resources,
+  &.category-styleguides-component-libraries,
+  &.category-content{
+    & .page-container{
+      background-color: $pink;
+        &::before, &::after{
+          background-color: $pink;
+        }
+      }
+    }
+
+  /* TOOLS COLOR*/
+  &.category-tools,
+  &.category-color,
+  &.category-typography{
+    & .page-container{
+      background-color: $orange;
+        &::before, &::after{
+          background-color: $orange;
+        }
+      }
+    }
 
 
   }

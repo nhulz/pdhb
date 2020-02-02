@@ -10,6 +10,10 @@ body {
   padding: 2rem;
   background-color: $yellow;
 
+  @include phone-only{
+    padding: 1.2rem;
+  }
+
   &::before{
     content:'';
     display: block;
@@ -19,6 +23,10 @@ body {
     width: 100vw;
     height: 2rem;
     background-color: $yellow;
+
+    @include phone-only{
+      height: 1.2rem;
+    }
   }
 
   &::after{
@@ -30,6 +38,10 @@ body {
     width: 100vw;
     height: 2rem;
     background-color: $yellow;
+
+    @include phone-only{
+      height: 1.2rem;
+    }
   }
 
   &__inner {
@@ -55,6 +67,9 @@ body {
 
 .header-container {
   margin-top: 100px;
+  @include phone-only{
+    margin-top: 5rem;
+  }
 }
 
 .body-container{
@@ -64,6 +79,7 @@ body {
 
   @include phone-only{
     flex-direction: column;
+    margin-top: 5rem;
   }
 }
 
@@ -72,11 +88,12 @@ body {
   flex-grow: 1;
   flex-basis: 33%;
   margin-bottom: 4rem;
+  padding-right: 1rem;
 }
 
 .category-sidebar{}
 
-.category-title, .post-title{
+.category-title, .post-title, .subcategory-title{
   text-decoration: none;
   color: black;
 }

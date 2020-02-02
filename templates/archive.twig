@@ -17,21 +17,22 @@
 		<div class="container archive-container">
 
 			<header class="header-container">
-				<a class="back-btn" href="{{site.url}}">< Back</a>
+				<a class="back-btn hide-mobile" href="{{site.url}}">Back</a>
         {% if title %}<h1>{{title}}</h1>{% endif %}
 			</header>
-			<sidebar class="category-sidebar">
+
+			<sidebar class="category-sidebar" id="sub-nav-toggle">
 					{% for item in subcategories %}
 						<h4><a class="category-title" href="{{current_cat ~ item.slug}}">{{item.name}}</a></br></h4>
 					{% endfor %}
 					{% for term in parent_categories %}
 						{% for subterm in category_list %}
 							{% if subterm.id == term.id %}
-								<div class="category-container">
-							        <h3><a class="category-title" href="{{term.link}}">{{term.name}}</a></h3>
-								        <ul class="link-container">
+								<div class="category-sidebar__container">
+							        <h3><a class="category-title hide-mobile" href="{{term.link}}">{{term.name}}</a></h3>
+								        <ul class="subcategory-link-container">
 								            {% for category in term.children %}
-															<li><a class="post-title" href="{{category.link}}">{{category.name}}</a></li>
+															<li><a class="subcategory-title" href="{{category.link}}">{{category.name}}</a></li>
 								            {% endfor %}
 								        </ul>
 											</div>
@@ -39,17 +40,24 @@
 									{% endfor %}
 							{% endfor %}
 			</sidebar>
+			<a class="toggle toggle-subcategories hide-desktop" href="#sub-nav-toggle">Toggle categories</a>
+
 			<main class="post-container">
-      {% for post in posts %}
-			<a href="{{post.url}}">
-			<div class="post__single">
-				<h2 class="post-title" href="{{post.url}}">{{post.title}}</h2>
-				<p class="post-attribution">By <a href="{{post.author_url}}">{{post.author_name}}</a> ❖ <a href="{{post.pub_url}}">{{post.pub_name}}</a></p>
-				<p>{{post.preview}}</p>
-			</div>
-		</a>
+      	{% for post in posts %}
+				<a href="{{post.url}}">
+					<div class="post__single">
+						<h2 class="post-title" href="{{post.url}}">{{post.title}}</h2>
+							<p class="post-attribution">By <a href="{{post.author_url}}">{{post.author_name}}</a>
+								{% if post.pub_url %}
+					 				❖ <a href="{{post.pub_url}}">{{post.pub_name}}</a>
+					 			{% endif %}
+				 			</p>
+							<p class="post-preview">{{post.preview}}</p>
+						</div>
+					</a>
         {% endfor %}
 			</main>
+
 		</div>
 	</div>
 </div>

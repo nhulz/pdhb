@@ -1,5 +1,3 @@
-
-
 .archive-container{
   display: flex;
   flex-flow: row wrap;
@@ -11,28 +9,64 @@
   flex: 1 100%;
 }
 
-.post-container{
-  flex: 100% 0 0;
-
-  @include tablet-landscape-up{
-    flex: 60%;
-  }
-}
-
-
-.category-sidebar{
-  flex: 30% 0 0;
-  padding-top: 6rem;
-  display: none;
+/* SUBCATEGORY SIDEBAR  */
+sidebar.category-sidebar{
+  flex: 100%;
+  padding-top: 2rem;
+  height: 0;
+  overflow: hidden;
 
   @include tablet-landscape-up{
     display: block;
+    padding-top: 6rem;
+    flex: 30% 0 0;
+    height: 100%;
+  }
+
+  &.is-visible{
+    -webkit-transition: -webkit-height 1s cubic-bezier(.86,0,.07,1);
+    transition: -webkit-height 1s cubic-bezier(.86,0,.07,1);
+    transition: height 1s cubic-bezier(.86,0,.07,1);
+    transition: height 1s cubic-bezier(.86,0,.07,1),
+    -webkit-height 1s cubic-bezier(.86,0,.07,1);
+    height: 100%;
   }
 }
 
+.category-sidebar__container{
+  flex-grow: 1;
+  flex-basis: 33%;
+  margin-bottom: 0rem;
+  @include tablet-portrait-up{
+    margin-bottom: 4rem;
+  }
+  @include phone-only{
+    flex-basis: 100%;
+  }
+}
+
+.subcategory-link-container li{
+  @include aref_font($regular, $text-sm);
+
+  @include phone-only{
+  padding: 1.5rem 0;
+  border-top: 1px $gray-1 solid;
+  }
+}
+
+.toggle-subcategories{
+  text-decoration: none;
+  color: black;
+  @include aref_font($regular, $text-sm);
+  list-style-type: none;
+  border-top: 1px $gray-1 solid;
+  padding-top: 1rem;
+}
+
+/* POST STYLING */
 .post__single{
   margin-top: 3rem;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 5px;
   flex-basis: 52%;
   transition: all ease-in-out .2s;
@@ -50,9 +84,32 @@
     0 0.5px 33.4px rgba(0, 0, 0, 0.021),
     0 1px 80px rgba(0, 0, 0, 0.07);
   }
+
+  @include tablet-landscape-up{
+    padding: 2rem;
+  }
+
+  @include phone-only{
+    padding: 0;
+
+    & > .post-preview{
+        line-height: 2.8rem;
+    }
+  }
 }
 
+.post-container{
+  flex: 100% 0 0;
+
+  @include tablet-landscape-up{
+    flex: 60%;
+  }
+}
 
 .post-attribution{
   margin-bottom: .5rem;
+
+  @include phone-only{
+    margin: 1rem 0;
+  }
 }

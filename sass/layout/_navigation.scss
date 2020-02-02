@@ -18,6 +18,9 @@
   transition: height 1s cubic-bezier(.86,0,.07,1),
   -webkit-height 1s cubic-bezier(.86,0,.07,1);
 
+  @include phone-only{
+    height: calc(100% - 2.4rem);
+    }
   }
 
 .nav{
@@ -33,6 +36,11 @@
   transition: height 1s cubic-bezier(.86,0,.07,1);
   transition: height 1s cubic-bezier(.86,0,.07,1),
   -webkit-height 1s cubic-bezier(.86,0,.07,1);
+
+    @include phone-only{
+      width: calc(100% - 2.4rem);
+      margin: 1.2rem;
+      }
 
   &__inner{
     text-align: center;

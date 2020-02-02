@@ -2,3 +2,15 @@ a{
   text-decoration: none;
   color: $gray;
 }
+
+.hide-mobile{
+  @include phone-only{
+    display: none;
+  }
+}
+
+.hide-desktop{
+  @include tablet-portrait-up{
+    display: none;
+  }
+}
