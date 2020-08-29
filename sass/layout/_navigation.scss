@@ -94,6 +94,12 @@
   display: flex;
   justify-content: flex-end;
   margin: 2rem;
+
+  &#home{
+    @include tablet-portrait-up{
+      display:none;
+      }
+    }
 }
 
 .nav-icon:after,

@@ -80,6 +80,7 @@ body {
   @include phone-only{
     flex-direction: column;
     margin-top: 5rem;
+    display: none;
   }
 }
 
@@ -89,16 +90,32 @@ body {
   flex-basis: 33%;
   margin-bottom: 4rem;
   padding-right: 1rem;
+
+  .post-title{
+    color: $gray;
+
+    &:hover{
+      color: black;
+    }
+  }
 }
 
 .category-sidebar{}
 
-.category-title, .post-title, .subcategory-title{
+.category-title, .subcategory-title{
   text-decoration: none;
   color: black;
 }
 
+
 .link-container > li {
   @include aref_font($regular, $text-sm);
   list-style-type: none;
+
+  &:hover{
+    //list-style-type: disc !important;
+    color: black;
+  }
 }
+
+.read-more{display:none;}

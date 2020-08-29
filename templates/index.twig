@@ -1,6 +1,7 @@
 {% extends "base.twig" %}
 
 {% block content %}
+{% include "menu-mobile.twig" %}
 <!--
 <div class="page-container">
 		<div class="header-container">
@@ -13,9 +14,16 @@
 -->
 <div class="page-container">
 	<div class="page-container__inner">
-		<div class="container">
+
+		<!-- Navigation toggle -->
+		<div class="nav-container" id="home">
+			<a class="toggle nav-icon" href="#nav-toggle"><div href="#nav-toggle"></div></a>
+		</div>
+
+		<div class="container" id="main-title-container">
 			<header class="header-container">
-				<h1>The Product <br> Design Handbook</h1>
+				<h1 id="main-title">The Product <br> Design Handbook</h1>
+				<h4 id="main-title-caption">A collection of resources, tools, and methodologies for building better digital products.</h4>
 			</header>
 			<main class="body-container">
 			{% for term in parent_categories %}

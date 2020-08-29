@@ -3,6 +3,9 @@
   flex-flow: row wrap;
   flex: 1 100%;
 
+  & a > h2.post-title{
+    color: black;
+  }
 }
 
 .archive-container > * {
@@ -90,13 +93,14 @@ sidebar.category-sidebar{
   }
 
   @include phone-only{
-    padding: 0;
+    padding: 1rem;
 
     & > .post-preview{
         line-height: 2.8rem;
     }
   }
 }
+
 
 .post-container{
   flex: 100% 0 0;
