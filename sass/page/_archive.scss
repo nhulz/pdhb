@@ -51,6 +51,14 @@ sidebar.category-sidebar{
 .subcategory-link-container li{
   @include aref_font($regular, $text-sm);
 
+  & > a{
+    color: $gray;
+
+    &:hover{
+      color: black;
+    }
+  }
+
   @include phone-only{
   padding: 1.5rem 0;
   border-top: 1px $gray-1 solid;

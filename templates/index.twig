@@ -2,6 +2,7 @@
 
 {% block content %}
 {% include "menu-mobile.twig" %}
+
 <!--
 <div class="page-container">
 		<div class="header-container">
@@ -26,6 +27,7 @@
 				<h4 id="main-title-caption">A collection of resources, tools, and methodologies for building better digital products.</h4>
 			</header>
 			<main class="body-container">
+				<div class="searchform-container" role="searchform">{% include "partial/searchform.twig" %}</div>
 			{% for term in parent_categories %}
 					<div class="category-container">
 					        <h3><a class="category-title" href="{{term.link}}">{{term.name}}</a></h3>

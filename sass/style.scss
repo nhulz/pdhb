@@ -1,7 +1,7 @@
 /*
- * Theme Name: My Timber Starter Theme
- * Description: Starter Theme to use with Timber
- * Author: Upstatement and YOU!
+ * Theme Name: The Product Design Handbook
+ * Description: A collection of resources, tools, and methodologies for building better digital products.
+ * Author: Nathan Hulsey
 */
 
 @import url("https://use.typekit.net/lxw2rea.css");
@@ -21,6 +21,7 @@
 /* PARTIALS */
 @import "partials/layout-media-query.scss";
 @import "partials/back-button.scss";
+@import "partials/search-home.scss";
 
 
 /* LAYOUT */

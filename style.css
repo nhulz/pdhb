@@ -1,7 +1,7 @@
 /*
- * Theme Name: My Timber Starter Theme
- * Description: Starter Theme to use with Timber
- * Author: Upstatement and YOU!
+ * Theme Name: The Product Design Handbook
+ * Description: A collection of resources, tools, and methodologies for building better digital products.
+ * Author: Nathan Hulsey
 */
 @import url("https://use.typekit.net/lxw2rea.css");
 @import url("https://fonts.googleapis.com/css?family=Aref+Ruqaa");
@@ -53,6 +53,10 @@ caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle; }
+
+/* line 14, sass/base/_reset.scss */
+input {
+  border: none; }
 
 /* line 12, sass/base/_typography.scss */
 html {
@@ -193,6 +197,29 @@ a {
   font-family: freight-sans-pro, sans-serif;
   font-weight: 400;
   font-size: 1.8rem; }
+
+/* line 1, sass/partials/search-home.scss */
+.searchform-container {
+  margin-bottom: 4rem;
+  display: block;
+  width: 100%; }
+
+/* line 7, sass/partials/search-home.scss */
+input#searchform-home {
+  width: 100%;
+  font-size: 3.6rem;
+  font-family: paralucent, sans-serif;
+  font-weight: 400;
+  font-size: 3.6rem;
+  color: black;
+  border-bottom: #DBE1E6 1px solid; }
+  /* line 8, sass/partials/search-home.scss */
+  input#searchform-home::placeholder {
+    color: #DBE1E6; }
+  /* line 18, sass/partials/search-home.scss */
+  input#searchform-home.focus-visible {
+    border-bottom: black 1px solid;
+    outline: none; }
 
 /* LAYOUT */
 /* line 1, sass/layout/_page-colors.scss */
@@ -566,13 +593,19 @@ sidebar.category-sidebar {
   font-family: 'Aref Ruqaa', serif;
   font-weight: 400;
   font-size: 1.8rem; }
+  /* line 54, sass/page/_archive.scss */
+  .subcategory-link-container li > a {
+    color: #6d7783; }
+    /* line 57, sass/page/_archive.scss */
+    .subcategory-link-container li > a:hover {
+      color: black; }
   @media (max-width: 599px) {
     /* line 51, sass/page/_archive.scss */
     .subcategory-link-container li {
       padding: 1.5rem 0;
       border-top: 1px #DBE1E6 solid; } }
 
-/* line 60, sass/page/_archive.scss */
+/* line 68, sass/page/_archive.scss */
 .toggle-subcategories {
   text-decoration: none;
   color: black;
@@ -584,43 +617,43 @@ sidebar.category-sidebar {
   padding-top: 1rem; }
 
 /* POST STYLING */
-/* line 70, sass/page/_archive.scss */
+/* line 78, sass/page/_archive.scss */
 .post__single {
   margin-top: 3rem;
   padding: 1rem;
   border-radius: 5px;
   flex-basis: 52%;
   transition: all ease-in-out .2s; }
-  /* line 78, sass/page/_archive.scss */
+  /* line 86, sass/page/_archive.scss */
   .post__single:hover {
     transition: all ease-in-out .2s;
     transform: scale(1.01);
     cursor: pointer;
     box-shadow: 0 0px 2.2px rgba(0, 0, 0, 0.01), 0 0.1px 5.3px rgba(0, 0, 0, 0.009), 0 0.1px 10px rgba(0, 0, 0, 0.007), 0 0.2px 17.9px rgba(0, 0, 0, 0.01), 0 0.5px 33.4px rgba(0, 0, 0, 0.021), 0 1px 80px rgba(0, 0, 0, 0.07); }
   @media (min-width: 900px) {
-    /* line 70, sass/page/_archive.scss */
+    /* line 78, sass/page/_archive.scss */
     .post__single {
       padding: 2rem; } }
   @media (max-width: 599px) {
-    /* line 70, sass/page/_archive.scss */
+    /* line 78, sass/page/_archive.scss */
     .post__single {
       padding: 1rem; }
-      /* line 98, sass/page/_archive.scss */
+      /* line 106, sass/page/_archive.scss */
       .post__single > .post-preview {
         line-height: 2.8rem; } }
 
-/* line 105, sass/page/_archive.scss */
+/* line 113, sass/page/_archive.scss */
 .post-container {
   flex: 100% 0 0; }
   @media (min-width: 900px) {
-    /* line 105, sass/page/_archive.scss */
+    /* line 113, sass/page/_archive.scss */
     .post-container {
       flex: 60%; } }
 
-/* line 113, sass/page/_archive.scss */
+/* line 121, sass/page/_archive.scss */
 .post-attribution {
   margin-bottom: .5rem; }
   @media (max-width: 599px) {
-    /* line 113, sass/page/_archive.scss */
+    /* line 121, sass/page/_archive.scss */
     .post-attribution {
       margin: 1rem 0; } }

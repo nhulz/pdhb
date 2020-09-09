@@ -1,0 +1,22 @@
+.searchform-container{
+  margin-bottom: 4rem;
+  display: block;
+  width: 100%;
+}
+
+input#searchform-home {
+  &::placeholder{
+    color: $gray-1;
+  }
+
+  width: 100%;
+  font-size: $text-lr;
+  @include paralucent_font($regular, $text-lr);
+  color: black;
+  border-bottom: $gray-1 1px solid;
+
+  &.focus-visible{
+    border-bottom: black 1px solid;
+    outline: none;
+  }
+}
