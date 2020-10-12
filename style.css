@@ -162,6 +162,10 @@ a {
   .hide-desktop {
     display: none; } }
 
+/* line 18, sass/base/_utility.scss */
+.reset-padding {
+  padding: 0 !important; }
+
 /* PARTIALS */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -220,6 +224,10 @@ input#searchform-home {
   input#searchform-home.focus-visible {
     border-bottom: black 1px solid;
     outline: none; }
+  @media (max-width: 599px) {
+    /* line 7, sass/partials/search-home.scss */
+    input#searchform-home {
+      font-size: 2.4rem; } }
 
 /* LAYOUT */
 /* line 1, sass/layout/_page-colors.scss */
@@ -474,39 +482,43 @@ body {
   @media (max-width: 599px) {
     /* line 75, sass/layout/_main.scss */
     .body-container {
-      flex-direction: column;
-      margin-top: 5rem;
-      display: none; } }
+      margin-top: 2rem; } }
 
-/* line 88, sass/layout/_main.scss */
+/* line 86, sass/layout/_main.scss */
 .category-container {
   flex-grow: 1;
   flex-basis: 33%;
   margin-bottom: 4rem;
   padding-right: 1rem; }
-  /* line 94, sass/layout/_main.scss */
+  /* line 92, sass/layout/_main.scss */
   .category-container .post-title {
     color: #6d7783; }
-    /* line 97, sass/layout/_main.scss */
+    /* line 95, sass/layout/_main.scss */
     .category-container .post-title:hover {
       color: black; }
+  @media (max-width: 599px) {
+    /* line 86, sass/layout/_main.scss */
+    .category-container {
+      flex-direction: column;
+      margin-top: 5rem;
+      display: none; } }
 
-/* line 105, sass/layout/_main.scss */
+/* line 108, sass/layout/_main.scss */
 .category-title, .subcategory-title {
   text-decoration: none;
   color: black; }
 
-/* line 111, sass/layout/_main.scss */
+/* line 114, sass/layout/_main.scss */
 .link-container > li {
   font-family: 'Aref Ruqaa', serif;
   font-weight: 400;
   font-size: 1.8rem;
   list-style-type: none; }
-  /* line 115, sass/layout/_main.scss */
+  /* line 118, sass/layout/_main.scss */
   .link-container > li:hover {
     color: black; }
 
-/* line 121, sass/layout/_main.scss */
+/* line 124, sass/layout/_main.scss */
 .read-more {
   display: none; }
 
@@ -657,3 +669,12 @@ sidebar.category-sidebar {
     /* line 121, sass/page/_archive.scss */
     .post-attribution {
       margin: 1rem 0; } }
+
+/* line 1, sass/page/_404.scss */
+.error-message {
+  margin-top: 4rem;
+  flex-basis: 10; }
+  @media (max-width: 599px) {
+    /* line 1, sass/page/_404.scss */
+    .error-message {
+      margin-top: 1rem; } }

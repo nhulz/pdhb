@@ -1,24 +1,14 @@
 
 <div class="nav toggle-content" id="nav-toggle">
 	<div class="nav__inner">
-	{% if menu %}
-			{% for term in parent_categories %}
-							<h3 class="nav-item"><a class="category-title" href="{{term.link}}">{{term.name}}</a></h3>
-			{% endfor %}
-		{% endif %}
+{% if menu %}
+	{% for item in menu.items %}
+		<h3 class="nav-item"><a class="category-title" href="{{item.link}}">{{item.name}}</a></h3>
+	{% endfor %}
+{% endif %}
 	</div>
 		<div>
 			<a class="toggle close" href="#nav-toggle">
 			</a>
 		</div>
 </div>
-
-	<!-- <ul>
-	{% for item in menu %}
-		<li class="{{ item.classes | join(' ') }}">
-			<a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
-			{% include "menu.twig" with {'menu': item.get_children} %}
-			hi
-		</li>
-	{% endfor %}
-	</ul> -->

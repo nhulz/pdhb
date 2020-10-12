@@ -17,6 +17,7 @@
 $templates = array( 'archive.twig', 'index.twig' );
 $context = Timber::get_context();
 
+
 $context['categories'] = Timber::get_terms('category');
 
 

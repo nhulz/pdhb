@@ -1,12 +1,49 @@
 {# see `archive.twig` for an alternative strategy of extending templates #}
 {% extends "base.twig" %}
 
+
 {% block content %}
-  {# see `base.twig:27` for where this block's content will be inserted #}
-  <div class="content-wrapper">
-    {% for post in posts %}
-      {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-    {% endfor %}
+{% include "menu-mobile.twig" %}
+
+<div class="page-container">
+	<div class="page-container__inner">
+
+		<!-- Navigation toggle -->
+		<div class="nav-container">
+			<a class="toggle nav-icon" href="#nav-toggle"><div href="#nav-toggle"></div></a>
+		</div>
+
+		<div class="container archive-container">
+
+			<header class="header-container">
+				<a class="back-btn reset-padding" href="{{site.url}}">Back</a>
+        {% if title %}<h3>{{title}}</h3>{% endif %}
+			</header>
+
+			<main class="post-container">
+        	{% for post in posts %}
+  				<a href="{{post.url}}">
+  					<div class="post__single">
+  						<h2 class="post-title" href="{{post.url}}">{{post.title}}</h2>
+  							<p class="post-attribution">By <a href="{{post.author_url}}">{{post.author_name}}</a>
+  								{% if post.pub_url %}
+  					 				❖ <a href="{{post.pub_url}}">{{post.pub_name}}</a>
+  					 			{% endif %}
+  				 			</p>
+  							<p class="post-preview">{{post.preview}}</p>
+  						</div>
+  					</a>
+            {% else %}
+            <p>Sorry, there doesn't seem to be any posts that match your search</p>
+          {% endfor %}
+			</main>
+
+		</div>
+	</div>
+</div>
+
+
+
 
     {% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
   </div>

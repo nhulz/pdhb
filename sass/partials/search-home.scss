@@ -19,4 +19,8 @@ input#searchform-home {
     border-bottom: black 1px solid;
     outline: none;
   }
+
+  @include phone-only{
+    font-size: $text-md-2;
+  }
 }

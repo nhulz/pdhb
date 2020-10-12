@@ -1,0 +1,8 @@
+.error-message{
+  margin-top: 4rem;
+  flex-basis: 10;
+
+  @include phone-only{
+    margin-top: 1rem;
+  }
+}

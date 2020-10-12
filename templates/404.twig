@@ -1,5 +1,21 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	Sorry, we couldn't find what you're looking for.
+{% include "menu-mobile.twig" %}
+
+<div class="page-container">
+	<div class="page-container__inner">
+
+		<!-- Navigation toggle -->
+		<div class="nav-container">
+			<a class="toggle nav-icon" href="#nav-toggle"><div href="#nav-toggle"></div></a>
+		</div>
+
+		<div class="container archive-container">
+			<a class="reset-padding back-btn" href="{{site.url}}">Back</a>
+			<h1>This is embarassing...</h1>
+			<p class="error-message">Looks like something got messed up.. sorry about that. Try going back or navigating to another page via the menu.</p>
+		</div>
+	</div>
+</div>
 {% endblock %}
